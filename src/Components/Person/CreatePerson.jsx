@@ -5,12 +5,12 @@ import css from './Person.module.css'
 
 const CreatePerson = (props) => {
     return (
-        <form className = {css.form}>
-            <Field placeholder = {'enter first name'} component = {Input} name = {'firstName'} 
+        <form className = {css.form} onSubmit={props.handleSubmit}>
+            <Field placeholder = {'Enter first name'} component = {Input} name = {'firstName'} 
             // validate = {[requiredField]} 
             />
 
-            <Field placeholder = {'enter second name'} component = {Input} name = {'firstName'} 
+            <Field placeholder = {'Enter second name'} component = {Input} name = {'lastName'} 
             // validate = {[requiredField]} 
             />
 

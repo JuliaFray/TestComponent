@@ -10,7 +10,6 @@ export const personAPI = {
             instance
                 .get(`persons`)
                 .then(response => {
-                    console.log(response.data)
                     return response.data
                 })
         )
@@ -19,28 +18,42 @@ export const personAPI = {
     getUser(userId) {
         return (
             instance
-                .get(`person/${userId}`)
+                .get(`persons/${userId}`)
                 .then(response => {
                     return response
                 })
         )
     },
 
-    putUser(userId, userData) {
+    updateUser(userId, {newFirstName, newLastName}) {
         return (
             instance
-                .put(`person/${userId}`)
+                .put(`persons/${userId}`, {firstName: newFirstName, lastName: newLastName})
+                .then(response => {
+                    console.log(response)
+                    return response
+                })
+        )
+    },
+
+    addUser(userId, {newFirstName, newLastName}) {
+        console.log(userId, {newFirstName, newLastName})
+        return (
+            instance
+                .post(`persons/${userId}`, {firstName: newFirstName, lastName: newLastName})
                 .then(response => {
                     return response
                 })
         )
     },
 
-    postUser(userId, userData) {
+    deleteUser(userId) {
+        console.log(userId);
         return (
             instance
-                .post(`person/${userId}`)
+                .delete(`persons/${userId}`)
                 .then(response => {
+                    console.log(userId);
                     return response
                 })
         )

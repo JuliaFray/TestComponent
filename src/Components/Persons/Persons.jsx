@@ -5,7 +5,10 @@ const Persons = (props) => {
     // console.log(props)
     return (
         <div>
-            {props.users.persons.map(p => <Person person = {p} />)}
+            {props.users.persons.map(p => <Person 
+            person = {p} 
+            onDeleteUser = {props.deleteUser} 
+            onUpdateUser = {props.updateUser} />)}
         </div>
     )
 }
