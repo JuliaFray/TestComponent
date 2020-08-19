@@ -1,26 +1,28 @@
 import React from 'react';
-import { reduxForm, Field } from 'redux-form';
-import { Input } from '../Common/FormsControls';
-import css from './Person.module.css'
+import CreatePersonForm from './CreatePersonForm';
+import { connect } from 'react-redux';
+import {addNewUser} from './../Redux/person-reducer';
 
-const CreatePerson = (props) => {
+const CreatePersonComponent = (props) => {
+
+    const onSubmit = (formData) => {
+        // console.log(formData);
+        props.addNewUser(formData)
+    }
+
     return (
-        <form className = {css.form} onSubmit={props.handleSubmit}>
-            <Field placeholder = {'Enter first name'} component = {Input} name = {'firstName'} 
-            // validate = {[requiredField]} 
-            />
-
-            <Field placeholder = {'Enter second name'} component = {Input} name = {'lastName'} 
-            // validate = {[requiredField]} 
-            />
-
-            <button>Send</button>
-        </form>
+        <div>
+            <CreatePersonForm onSubmit={onSubmit} />
+        </div>
     )
+
 };
 
-const CreatePersonRedux = reduxForm ({
-    form: 'person'
-})(CreatePerson);
+let mapStateToProps = (state) => ({
+    firstName : state.persons.firstName,
+    lastName : state.persons.lastName
+});
 
-export default CreatePersonRedux;
+
+
+export default connect(mapStateToProps, {addNewUser})(CreatePersonComponent);

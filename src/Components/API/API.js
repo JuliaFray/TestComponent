@@ -36,11 +36,11 @@ export const personAPI = {
         )
     },
 
-    addUser(userId, {newFirstName, newLastName}) {
-        console.log(userId, {newFirstName, newLastName})
+    addUser({newFirstName, newLastName}) {
+        console.log({newFirstName, newLastName})
         return (
             instance
-                .post(`persons/${userId}`, {firstName: newFirstName, lastName: newLastName})
+                .post(`persons`, {firstName: newFirstName, lastName: newLastName})
                 .then(response => {
                     return response
                 })

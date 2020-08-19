@@ -12,8 +12,8 @@ class PersonsContainer extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log(prevProps)
-        console.log(this.props)
+        // console.log(prevProps)
+        // console.log(this.props)
         if (prevProps.users.persons.length != this.props.users.persons.length) {
             this.props.getUsers();
         }

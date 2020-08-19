@@ -1,10 +1,11 @@
 import React from 'react';
+import css from './Common.module.css'
 
 
 const UpdatePerson = ( {person, onUpdateUser} ) => {
     return (
         <div>
-            <button onClick = {() => { onUpdateUser(person.id)} } >Update</button>
+            <button className = {`${css.btn} ${css.update}`} onClick = {() => { onUpdateUser(person.id)} } >U</button>
         </div>
     )
 }
