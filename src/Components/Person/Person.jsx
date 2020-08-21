@@ -3,13 +3,14 @@ import css from './Person.module.css'
 import DeletePerson from '../Common/DeletePerson';
 import UpdatePerson from './../Common/UpdatePerson';
 
+
 const Person = ({ person, onDeleteUser, onUpdateUser }) => {
     // console.log(onDeleteUser)
     return (
         <div className={css.tbl}>
             <table>
                 <tr>
-                    <td>
+                    <td className = {css.col}>
                         {person.firstName}
                     </td>
                     <td>

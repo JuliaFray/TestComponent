@@ -16,31 +16,35 @@ export const personAPI = {
     },
 
     getUser(userId) {
+        console.log(userId)
         return (
             instance
                 .get(`persons/${userId}`)
                 .then(response => {
-                    return response
-                })
-        )
-    },
-
-    updateUser(userId, {newFirstName, newLastName}) {
-        return (
-            instance
-                .put(`persons/${userId}`, {firstName: newFirstName, lastName: newLastName})
-                .then(response => {
                     console.log(response)
-                    return response
+                    return response.data
                 })
         )
     },
 
-    addUser({newFirstName, newLastName}) {
-        console.log({newFirstName, newLastName})
+    updateUser({ id, newFirstName, newLastName }) {
+        console.log({ id, newFirstName, newLastName })
+        debugger
         return (
             instance
-                .post(`persons`, {firstName: newFirstName, lastName: newLastName})
+                .put(`persons/${id}`, { firstName: newFirstName, lastName: newLastName, id: id })
+                .then(response => {
+                    console.log(response.data)
+                    return response.data
+                })
+        )
+    },
+
+    addUser({ newFirstName, newLastName }) {
+        console.log({ newFirstName, newLastName })
+        return (
+            instance
+                .post(`persons`, { firstName: newFirstName, lastName: newLastName })
                 .then(response => {
                     return response
                 })

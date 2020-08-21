@@ -14,10 +14,3 @@ export const Input = ({ input, meta, child, element, ...props }) => {
         </div>
     )
 };
-
-export const createField = (placeholder, name, validators, component, type, text = '') => {
-    return (
-    <div>
-        < Field placeholder={placeholder} component={component} name={name} validate={validators} type={type} /> {text}
-    </div>
-    )} 

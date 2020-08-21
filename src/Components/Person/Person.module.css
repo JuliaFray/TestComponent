@@ -3,12 +3,15 @@
     width: 500px;
     margin: 0 auto;
     font-size: 16px;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
 }
 
-.tbl th {
-    width: 200px
+.tbl tr {
+    height: 50px;
+}
+
+.tbl td {
+    width: 40%;
 }
 
 .btns {
@@ -18,4 +21,13 @@
 
 .btn {
     padding: 5px;
+}
+
+.update {
+    display: flex;
+    
+}
+
+.update input {
+    height: 30px;
 }

@@ -3,6 +3,7 @@ import { personAPI } from './../API/API.js';
 const ADD_USER = 'ADD-USER';
 const UPDATE_USER = 'UPDATE-USER';
 const SET_USERS = 'SET-USERS';
+const SET_USER = 'SET-USER';
 
 const initialState = {
     persons: [
@@ -36,6 +37,12 @@ const personReducer = (state = initialState, action) => {
                 persons: action.persons
             };
 
+        case SET_USER:
+            // debugger
+            return {
+                ...state
+            };
+
         default:
             return state;
     }
@@ -47,12 +54,19 @@ export default personReducer;
 export const addNewUserSucces = (persons) => ({ type: ADD_USER, persons });
 export const updateUserSucces = (persons) => ({ type: UPDATE_USER, persons });
 export const setUsersSucces = (persons) => ({ type: SET_USERS, persons });
+export const setUserSucces = (persons) => ({ type: SET_USER, persons });
 
 // thunkCreator
 export const getUsers = () => async (dispatch) => {
     let response = await personAPI.getUsers();
-    let currentId = response.length;
     dispatch(setUsersSucces(response));
+};
+
+export const getUser = (userId) => async (dispatch) => {
+    let response = await personAPI.getUser(userId);
+    // debugger
+    dispatch(setUserSucces(response));
+    dispatch(getUsers());
 };
 
 export const deleteUser = (userId) => async (dispatch) => {
@@ -60,15 +74,18 @@ export const deleteUser = (userId) => async (dispatch) => {
     dispatch(getUsers());
 }
 
-export const updateUser = (userId, {newFirstName, newLastName}) => async (dispatch) => {
-    let response = await personAPI.updateUser(userId, {newFirstName, newLastName});
-    dispatch(setUsersSucces(response));
+export const updateUser = ( {id, firstName, lastName}) => async (dispatch) => {
+    console.log(firstName, lastName)
+    // dispatch(getUsers(id));
+    debugger
+    let response = await personAPI.updateUser( {id, firstName, lastName});
+    dispatch(setUserSucces(response));
     dispatch(getUsers());
 }
 
-export const addNewUser = ({newFirstName, newLastName}) => async (dispatch) => {
+export const addNewUser = ({ newFirstName, newLastName }) => async (dispatch) => {
     // console.log({newFirstName, newLastName})
-    let response = await personAPI.addUser({newFirstName, newLastName});
+    let response = await personAPI.addUser({ newFirstName, newLastName });
     console.log(response)
     dispatch(addNewUserSucces(response.data));
     dispatch(getUsers());
