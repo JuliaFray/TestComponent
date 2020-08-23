@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/TestComponent/static/css/main.cc895fb3.chunk.css",
-    "main.js": "/TestComponent/static/js/main.68c5c139.chunk.js",
-    "main.js.map": "/TestComponent/static/js/main.68c5c139.chunk.js.map",
+    "main.css": "/TestComponent/static/css/main.1f6026b0.chunk.css",
+    "main.js": "/TestComponent/static/js/main.aba19caf.chunk.js",
+    "main.js.map": "/TestComponent/static/js/main.aba19caf.chunk.js.map",
     "runtime-main.js": "/TestComponent/static/js/runtime-main.a4bb8eb3.js",
     "runtime-main.js.map": "/TestComponent/static/js/runtime-main.a4bb8eb3.js.map",
-    "static/js/2.19b53790.chunk.js": "/TestComponent/static/js/2.19b53790.chunk.js",
-    "static/js/2.19b53790.chunk.js.map": "/TestComponent/static/js/2.19b53790.chunk.js.map",
+    "static/js/2.945dce55.chunk.js": "/TestComponent/static/js/2.945dce55.chunk.js",
+    "static/js/2.945dce55.chunk.js.map": "/TestComponent/static/js/2.945dce55.chunk.js.map",
     "index.html": "/TestComponent/index.html",
-    "precache-manifest.bca5d2848f0d86d0d03f0a776135edde.js": "/TestComponent/precache-manifest.bca5d2848f0d86d0d03f0a776135edde.js",
+    "precache-manifest.ab3b12f2574d4e32707ef5d23901c359.js": "/TestComponent/precache-manifest.ab3b12f2574d4e32707ef5d23901c359.js",
     "service-worker.js": "/TestComponent/service-worker.js",
-    "static/css/main.cc895fb3.chunk.css.map": "/TestComponent/static/css/main.cc895fb3.chunk.css.map",
-    "static/js/2.19b53790.chunk.js.LICENSE.txt": "/TestComponent/static/js/2.19b53790.chunk.js.LICENSE.txt"
+    "static/css/main.1f6026b0.chunk.css.map": "/TestComponent/static/css/main.1f6026b0.chunk.css.map",
+    "static/js/2.945dce55.chunk.js.LICENSE.txt": "/TestComponent/static/js/2.945dce55.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a4bb8eb3.js",
-    "static/js/2.19b53790.chunk.js",
-    "static/css/main.cc895fb3.chunk.css",
-    "static/js/main.68c5c139.chunk.js"
+    "static/js/2.945dce55.chunk.js",
+    "static/css/main.1f6026b0.chunk.css",
+    "static/js/main.aba19caf.chunk.js"
   ]
 }
