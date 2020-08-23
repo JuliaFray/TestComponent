@@ -1,29 +1,27 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import { HashRouter, Route } from 'react-router-dom';
 import './App.css';
-import CreatePerson from './Components/Person/CreatePerson';
-import PersonsContainer from './Components/Persons/PersonsContainer';
+import StartPage from './Components/Common/startPage';
+import CreatePerson from './Components/Person/createPerson';
+import PersonSingle from './Components/Person/personSingle.js';
+import UpdatePerson from './Components/Person/updatePersonContainer';
+import PersonsContainer from './Components/Persons/personsContainer';
 import store from './Components/Redux/store';
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
-import UpdatePersonComponent from './Components/Person/UpdatePersonContainer'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Provider store={store}>
         <div className="App">
-          <PersonsContainer />
-
-          <CreatePerson />
-
-          {/* <Route path='/update/userId' render={() =>  <UpdatePersonComponent /> } /> */}
-          {/* <Route path='/' render={() =>   } /> */}
-          {/* <Route path='/' render={() =>   } /> */}
+          <Route path='' render={() => <StartPage />} />
+          <Route path='/persons' render={() => <PersonsContainer />} />
+          <Route path='/person/:userId' render={() => <PersonSingle />} />
+          <Route path='/create' render={() => <CreatePerson />} />
+          <Route path='/update/:userId' render={() => <UpdatePerson />} />
         </div>
       </Provider>
-    </BrowserRouter>
-
-
+    </HashRouter>
   );
 }
 

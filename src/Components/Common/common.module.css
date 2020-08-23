@@ -1,0 +1,46 @@
+.btn {
+    width: 40px;
+    height: 40px;
+}
+
+
+.delete {
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.delete:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+
+.starts {
+    display: inline-block;
+    margin: 20px;
+}
+
+.start {
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #333;
+    text-decoration: none;
+    background-color: #333;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.start:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #333;
+}
+
+@media  only screen and (max-width: 600px) {
+    .starts {
+        display: flex;
+    }
+}

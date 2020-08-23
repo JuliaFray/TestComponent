@@ -1,0 +1,84 @@
+.row {
+    width: 100%;
+    border-bottom: 1px solid #333;
+    font-size: 16px;
+    display: flex;
+    padding: 5px;
+}
+
+.th {
+    background-color: gray;
+    font-weight: 700;
+}
+
+.col {
+    width: 50%;
+    text-align: center;
+}
+
+.col2 {
+    width: 50%;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+}
+
+
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 5px;
+}
+
+.update {
+    width: 40px;
+    height: 40px;
+    border: 1px solid yellow;
+    background-color: rgba(255, 251, 0, 0.3);
+    text-decoration: none;
+    color: #333;
+}
+
+.update:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+form {
+    border: 1px solid #333;
+    width: 75%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form input {
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+form button {
+    width: 25%;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+form button:hover {
+    cursor: pointer;
+    color: #333;
+    background-color: white;
+}

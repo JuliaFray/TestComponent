@@ -1,4 +1,4 @@
-import { personAPI } from './../API/API.js';
+import { personAPI } from '../API/api.js';
 
 const ADD_USER = 'ADD-USER';
 const UPDATE_USER = 'UPDATE-USER';
@@ -32,16 +32,10 @@ const personReducer = (state = initialState, action) => {
             };
 
         case SET_USERS:
-            return {
-                ...state,
-                persons: action.persons
-            };
+            return { ...state, persons: action.persons };
 
         case SET_USER:
-            // debugger
-            return {
-                ...state
-            };
+            return { ...state, persons: action.persons };
 
         default:
             return state;
@@ -64,9 +58,7 @@ export const getUsers = () => async (dispatch) => {
 
 export const getUser = (userId) => async (dispatch) => {
     let response = await personAPI.getUser(userId);
-    // debugger
     dispatch(setUserSucces(response));
-    dispatch(getUsers());
 };
 
 export const deleteUser = (userId) => async (dispatch) => {
@@ -74,19 +66,14 @@ export const deleteUser = (userId) => async (dispatch) => {
     dispatch(getUsers());
 }
 
-export const updateUser = ( {id, firstName, lastName}) => async (dispatch) => {
-    console.log(firstName, lastName)
-    // dispatch(getUsers(id));
-    debugger
-    let response = await personAPI.updateUser( {id, firstName, lastName});
+export const updateUser = (person) => async (dispatch) => {
+    let response = await personAPI.updateUser(person);
     dispatch(setUserSucces(response));
     dispatch(getUsers());
 }
 
 export const addNewUser = ({ newFirstName, newLastName }) => async (dispatch) => {
-    // console.log({newFirstName, newLastName})
     let response = await personAPI.addUser({ newFirstName, newLastName });
-    console.log(response)
     dispatch(addNewUserSucces(response.data));
     dispatch(getUsers());
 }
