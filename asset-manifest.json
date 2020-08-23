@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/TestComponent/static/css/main.edd080a9.chunk.css",
-    "main.js": "/TestComponent/static/js/main.e529b7a6.chunk.js",
-    "main.js.map": "/TestComponent/static/js/main.e529b7a6.chunk.js.map",
+    "main.css": "/TestComponent/static/css/main.8056d3ba.chunk.css",
+    "main.js": "/TestComponent/static/js/main.edba1665.chunk.js",
+    "main.js.map": "/TestComponent/static/js/main.edba1665.chunk.js.map",
     "runtime-main.js": "/TestComponent/static/js/runtime-main.a4bb8eb3.js",
     "runtime-main.js.map": "/TestComponent/static/js/runtime-main.a4bb8eb3.js.map",
-    "static/js/2.de79422e.chunk.js": "/TestComponent/static/js/2.de79422e.chunk.js",
-    "static/js/2.de79422e.chunk.js.map": "/TestComponent/static/js/2.de79422e.chunk.js.map",
+    "static/js/2.1d279d12.chunk.js": "/TestComponent/static/js/2.1d279d12.chunk.js",
+    "static/js/2.1d279d12.chunk.js.map": "/TestComponent/static/js/2.1d279d12.chunk.js.map",
     "index.html": "/TestComponent/index.html",
-    "precache-manifest.69b06eb0b7211a6cc24857134da13a43.js": "/TestComponent/precache-manifest.69b06eb0b7211a6cc24857134da13a43.js",
+    "precache-manifest.65977ac78b3159321160552f35b74d82.js": "/TestComponent/precache-manifest.65977ac78b3159321160552f35b74d82.js",
     "service-worker.js": "/TestComponent/service-worker.js",
-    "static/css/main.edd080a9.chunk.css.map": "/TestComponent/static/css/main.edd080a9.chunk.css.map",
-    "static/js/2.de79422e.chunk.js.LICENSE.txt": "/TestComponent/static/js/2.de79422e.chunk.js.LICENSE.txt"
+    "static/css/main.8056d3ba.chunk.css.map": "/TestComponent/static/css/main.8056d3ba.chunk.css.map",
+    "static/js/2.1d279d12.chunk.js.LICENSE.txt": "/TestComponent/static/js/2.1d279d12.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a4bb8eb3.js",
-    "static/js/2.de79422e.chunk.js",
-    "static/css/main.edd080a9.chunk.css",
-    "static/js/main.e529b7a6.chunk.js"
+    "static/js/2.1d279d12.chunk.js",
+    "static/css/main.8056d3ba.chunk.css",
+    "static/js/main.edba1665.chunk.js"
   ]
 }
